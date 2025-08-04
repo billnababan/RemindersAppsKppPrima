@@ -196,8 +196,8 @@ http://localhost:4000/api/v1
 * `GET /reminders/:id` - Get a reminder
 * `DELETE /reminders/:id` - Delete reminder
 * `PATCH /reminders/:id/complete` - Mark as completed
-*  PATCH /reminders/:id/read` - Mark as read
-*  PATCH /reminders/:id/notes` - update notes
+* `PATCH /reminders/:id/read` - Mark as read
+* `PATCH /reminders/:id/notes` - update notes
 
 ### 📄 Document Endpoints
 
@@ -211,7 +211,7 @@ http://localhost:4000/api/v1
 
 * `GET /documents` - List documents
 * `POST /sign/id` - Sign document
-*  POST /reject/id` - Reject document
+* `POST /reject/id` - Reject document
   
 ---
 
