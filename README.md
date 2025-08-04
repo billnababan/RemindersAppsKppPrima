@@ -185,31 +185,34 @@ http://localhost:4000/api/v1
 
 ### 🔑 Authentication
 
-* `POST /auth/login` - Login
-* `POST /auth/register` - Register
-* `POST /auth/logout` - Logout
-* `GET /auth/me` - Get current user info
+* `POST /login` - Login
+* `POST /register` - Register
+* `POST /logout` - Logout
 
 ### ⏰ Reminder Endpoints
 
 * `GET /reminders` - List reminders
 * `POST /reminders` - Create reminder
 * `GET /reminders/:id` - Get a reminder
-* `PUT /reminders/:id` - Update reminder
 * `DELETE /reminders/:id` - Delete reminder
-* `POST /reminders/:id/complete` - Mark as completed
+* `PATCH /reminders/:id/complete` - Mark as completed
+*  PATCH /reminders/:id/read` - Mark as read
+*  PATCH /reminders/:id/notes` - update notes
 
 ### 📄 Document Endpoints
 
-* `GET /documents` - List documents
-* `POST /documents` - Upload document
+* `GET /documents` - List documents to esign
+* `POST /documents/upload` - Upload document
 * `GET /documents/:id` - Get document detail
 * `PUT /documents/:id` - Update document
 * `DELETE /documents/:id` - Delete document
-* `POST /documents/:id/sign` - Sign document
-* `POST /documents/:id/approve` - Approve document
-* `POST /documents/:id/reject` - Reject document
 
+### 📄 Esign Endpoints
+
+* `GET /documents` - List documents
+* `POST /sign/id` - Sign document
+*  POST /reject/id` - Reject document
+  
 ---
 
 ## 📦 License
