@@ -1,171 +1,217 @@
-📌 KPP Si PRIMA – Reminder & e-Sign Document System
-A fullstack web-based application built for KPP Prima Persada, designed to streamline internal workflows through automated reminder notifications and a secure electronic document signing system.
+# KPP Si PRIMA – Reminder & e-Sign Document System
 
-🔧 Tech Stack
+A fullstack web-based application built for **KPP Prima Persada**, designed to streamline internal workflows through automated reminder notifications and a secure electronic document signing system.
 
-Frontend: React.js + Tailwind CSS
-Backend: Node.js, Express.js
-Database: MySQL
-Messaging Integration: Fontee WhatsApp API
-Authentication: JWT Tokens
-File Upload: Multer
+---
 
-✨ Features
-🔔 Smart Reminder System
+## 🔧 Tech Stack
 
-Schedule and send role-based reminders (Surveyor, Engineering, Sign BA, FATB PELH, etc.)
-Multiple reminder types: Manual, Automatic, Scheduled
-Priority levels: Low, Medium, High, Urgent
-Due date tracking and notifications
+* **Frontend**: React.js + Tailwind CSS
+* **Backend**: Node.js, Express.js
+* **Database**: MySQL
+* **Messaging Integration**: Fontee WhatsApp API
+* **Authentication**: JWT Tokens
+* **File Upload**: Multer
 
-📝 e-Sign Document Workflow
+---
 
-Users can review, approve, or reject documents online
-Digital signature implementation
-Document status tracking (Pending, Approved, Rejected, Completed)
-Role-based document access control
+## ✨ Features
 
-📁 Document Management
+### 🔔 Smart Reminder System
 
-Upload and manage document templates
-File type validation and security
-Document version control
+* Role-based reminders (Surveyor, Engineering, Sign BA, FATB PELH, etc.)
+* Types: Manual, Automatic, Scheduled
+* Priority levels: Low, Medium, High, Urgent
+* Due date tracking & WhatsApp notifications
 
-📬 WhatsApp Integration
+### 📝 e-Sign Document Workflow
 
-Auto-send updates and reminders via Fontee WhatsApp API
-Real-time notifications for document approvals
-Custom message templates
+* Review, approve, or reject documents online
+* Digital signature implementation
+* Document status tracking: Pending, Approved, Rejected, Completed
+* Role-based document access
 
-👥 Role-based Access Control
+### 📁 Document Management
 
-Different permission levels for various user roles
-Secure authentication and authorization
-User management system
+* Upload/manage document templates
+* File validation and security
+* Version control
 
-📊 Responsive Dashboard
+### 📩 WhatsApp Integration
 
-Clean and mobile-friendly UI built with Tailwind CSS
-Real-time data updates
-Intuitive user experience
+* Real-time updates via Fontee API
+* Notification for reminders & document approval
+* Custom message templates
 
-🚀 Getting Started
-Prerequisites
-Make sure you have the following installed:
+### 👥 Role-based Access Control
 
-Node.js (v16 or higher)
-MySQL (v8.0 or higher)
-npm or yarn
+* Multiple permission levels
+* Secure authentication and authorization
+* User management
 
-Installation
+### 📊 Responsive Dashboard
 
-Clone the repository
-bashgit clone https://github.com/yourusername/kpp-si-prima.git
+* Built with Tailwind CSS
+* Clean, mobile-friendly UI
+* Real-time data updates
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js (v16+)
+* MySQL (v8.0+)
+* npm or yarn
+
+### Installation
+
+#### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/kpp-si-prima.git
 cd kpp-si-prima
+```
 
-Install Backend Dependencies
-bashcd backend
+#### Install Backend Dependencies
+
+```bash
+cd backend
 npm install
+```
 
-Install Frontend Dependencies
-bashcd ../frontend
+#### Install Frontend Dependencies
+
+```bash
+cd ../frontend
 npm install
+```
 
+### Database Setup
 
-Database Setup
+#### Create MySQL Database
 
-Create MySQL Database
-sqlCREATE DATABASE your_databases_name;
+```sql
+CREATE DATABASE your_database_name;
+```
 
-Import Database Schema
-bashmysql -u your_username -p your_databases < database/schema.sql
+#### Import Schema
 
-Import Sample Data (Optional)
-bashmysql -u your_username -p your_databases < database/sample_data.sql
+```bash
+mysql -u your_user -p your_database_name < database/schema.sql
+```
 
+#### (Optional) Import Sample Data
 
-Environment Configuration
+```bash
+mysql -u your_user -p your_database_name < database/sample_data.sql
+```
 
-Backend Environment Setup
-Create .env file in the backend directory:
-env# Database Configuration
+---
+
+## 📂 Environment Configuration
+
+### Backend `.env`
+
+```env
 DB_HOST=localhost
 DB_USER=your_mysql_username
 DB_PASSWORD=your_mysql_password
-DB_NAME=your_databases_name
+DB_NAME=your_database_name
 DB_PORT=3306
-
-# Server Configuration
 PORT=4000
 NODE_ENV=development
-
-# JWT Configuration
-JWT_SECRET=your_super_secret_jwt_key_here
+JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=7d
-
-# Fontee WhatsApp API Configuration
-FONTEE_API_KEY=your_fontee_api_key_here
+FONTEE_API_KEY=your_fontee_api_key
 FONTEE_BASE_URL=https://api.fontee.id
 FONTEE_DEVICE_ID=your_device_id
+```
 
-Frontend Environment Setup
-Create .env file in the frontend directory:
-env# API Configuration
-API_VITE_URL=http://localhost:4000/api/v1
+### Frontend `.env`
 
+```env
+VITE_API_URL=http://localhost:4000/api/v1
+```
 
-Fontee WhatsApp API Setup
+---
 
-Get API Key
+## 📢 Fontee WhatsApp API Setup
 
-Register at Fontee.id
-Verify your WhatsApp number
-Get your API key and device ID
-Add them to your backend .env file
+1. Register at [Fontee.id](https://fontee.id)
+2. Verify WhatsApp number
+3. Get API Key and Device ID
+4. Add them to the backend `.env` file
 
+#### Test WhatsApp Integration
 
-Test WhatsApp Integration
-bash# In backend directory
+```bash
+# From backend directory
 npm run test:whatsapp
+```
 
+---
 
-Running the Application
+## 🌐 Running the Application
 
-Start Backend Server
-bashcd backend
+### Start Backend Server
+
+```bash
+cd backend
 npm run dev
-Backend will run on: http://localhost:4000
-Start Frontend Development Server
-bashcd frontend
+```
+
+App running at: `http://localhost:4000`
+
+### Start Frontend Server
+
+```bash
+cd frontend
 npm start
-Frontend will run on: http://localhost:3000
+```
 
-📚 API Documentation
-Base URL
+App running at: `http://localhost:3000`
+
+---
+
+## 📃 API Documentation
+
+### Base URL
+
+```
 http://localhost:4000/api/v1
-Authentication Endpoints
+```
 
-POST /auth/login - User login
-POST /auth/register - User registration
-POST /auth/logout - User logout
-GET /auth/me - Get current user info
+### 🔑 Authentication
 
-Reminder Endpoints
+* `POST /auth/login` - Login
+* `POST /auth/register` - Register
+* `POST /auth/logout` - Logout
+* `GET /auth/me` - Get current user info
 
-GET /reminders - Get all reminders
-POST /reminders - Create new reminder
-GET /reminders/:id - Get specific reminder
-PUT /reminders/:id - Update reminder
-DELETE /reminders/:id - Delete reminder
-POST /reminders/:id/complete - Mark reminder as completed
+### ⏰ Reminder Endpoints
 
-Document Endpoints
+* `GET /reminders` - List reminders
+* `POST /reminders` - Create reminder
+* `GET /reminders/:id` - Get a reminder
+* `PUT /reminders/:id` - Update reminder
+* `DELETE /reminders/:id` - Delete reminder
+* `POST /reminders/:id/complete` - Mark as completed
 
-GET /documents - Get all documents
-POST /documents - Upload new document
-GET /documents/:id - Get specific document
-PUT /documents/:id - Update document
-DELETE /documents/:id - Delete document
-POST /documents/:id/sign - Sign document
-POST /documents/:id/approve - Approve document
-POST /documents/:id/reject - Reject document
+### 📄 Document Endpoints
+
+* `GET /documents` - List documents
+* `POST /documents` - Upload document
+* `GET /documents/:id` - Get document detail
+* `PUT /documents/:id` - Update document
+* `DELETE /documents/:id` - Delete document
+* `POST /documents/:id/sign` - Sign document
+* `POST /documents/:id/approve` - Approve document
+* `POST /documents/:id/reject` - Reject document
+
+---
+
+## 📦 License
+
+MIT – Feel free to use and adapt for your own project.
