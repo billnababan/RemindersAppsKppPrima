@@ -125,8 +125,6 @@ NODE_ENV=development
 JWT_SECRET=your_secret_key
 JWT_EXPIRES_IN=7d
 FONTEE_API_KEY=your_fontee_api_key
-FONTEE_BASE_URL=https://api.fontee.id
-FONTEE_DEVICE_ID=your_device_id
 ```
 
 ### Frontend `.env`
@@ -139,7 +137,7 @@ VITE_API_URL=http://localhost:4000/api/v1
 
 ## 📢 Fontee WhatsApp API Setup
 
-1. Register at [Fontee.id](https://fontee.id)
+1. Register at [Fontee.id](https://fonnte.com/)
 2. Verify WhatsApp number
 3. Get API Key and Device ID
 4. Add them to the backend `.env` file
@@ -171,7 +169,7 @@ cd frontend
 npm start
 ```
 
-App running at: `http://localhost:3000`
+App running at: `http://localhost:5173`
 
 ---
 
